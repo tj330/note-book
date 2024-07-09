@@ -4,6 +4,7 @@ import {useRef} from "react"
 import { useDispatch } from "react-redux"
 import { Link ,useNavigate} from "react-router-dom"
 import api from "../../../api"
+import pattern from "../../assets/pattern.png"
 
 function Form({type,route}) {
 
@@ -68,7 +69,7 @@ function Form({type,route}) {
         </form>
         </div>
         <div className="right">
-            <img src="src\assets\pattern.png" alt="Hey User!" />
+            <img src={pattern} alt="Hey User!" />
         </div>
     </div>
 }
