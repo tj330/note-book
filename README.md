@@ -4,9 +4,9 @@ Note-Book is a web application built for note-taking and task management. It all
 
 ## Screenshots
 
-<img src="https://drive.google.com/uc?id=1S_Pf8nbfNcyRccLAtByetWb0cxtdPlWJ" alt="Signup Page" style="height: 300px;" />
-<img src="https://drive.google.com/uc?id=1nlharfI-cPIrpe3Go-aNiI1MHw32noqZ" alt="Notebook Section" style="height: 300px;" />
-<img src="https://drive.google.com/uc?id=1f3Mzg6j_hMWKxrZI_tdJg_dslG1_fPfq" alt="Todo Section" style="height: 300px;" />
+<img src="https://drive.google.com/uc?id=1S_Pf8nbfNcyRccLAtByetWb0cxtdPlWJ" alt="Signup Page" style="width: 500px;" />
+<img src="https://drive.google.com/uc?id=1nlharfI-cPIrpe3Go-aNiI1MHw32noqZ" alt="Notebook Section" style="width: 500px;" />
+<img src="https://drive.google.com/uc?id=1f3Mzg6j_hMWKxrZI_tdJg_dslG1_fPfq" alt="Todo Section" style="width: 500px;" />
 
 ## Features
 
