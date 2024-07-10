@@ -37,7 +37,7 @@ To use Note-Book, follow these steps:
 To run Note-Book locally, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/S4xthhhhh/note-book.git`
-2. Navigate to the project directory: `cd note-book`
+2. Navigate to the project directory: `cd note-book/frontend`
 3. Install dependencies: `npm install`
 4. Start the server: `node server.js`
 5. Start the frontend:`npm run dev`
