@@ -7,7 +7,7 @@ const getToken=()=>{
 }
 
 const api=axios.create({
-    baseURL:"https://note-book-api-1ijj.onrender.com/api/"
+    baseURL:"https://localhost:8000/api/"
 })
 
 api.interceptors.request.use(
