@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: var(--primary);
+    background-color: #879e82;
     padding: 10px;
     min-height: 200px;
     border-radius: 10px;

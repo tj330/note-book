@@ -2,7 +2,7 @@ const initialState={
     isLogged:false,
     user:{},
     token:"",
-    profile:"http://images.pexels.com/photos/7794425/pexels-photo-7794425.jpeg"
+    profile:"https://cdn.pixabay.com/photo/2020/10/23/17/52/fox-5679446_1280.png"
 }
 
 const userReducer=(state=initialState,action)=>{
@@ -19,12 +19,12 @@ const userReducer=(state=initialState,action)=>{
         case "USER-LOGOUT":
             console.log(state)
             return{
-                ...state,
                 isLogged:false,
                 user:{
                     ...state.user,
                     username:"",
                 },
+                token:""
             }
         default:
             return state

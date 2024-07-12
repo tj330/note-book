@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux"
 import { Link ,useNavigate} from "react-router-dom"
 import api from "../../../api"
 import pattern from "../../assets/pattern.png"
+import {toast} from "react-toastify"
 
 function Form({type,route}) {
 
@@ -21,19 +22,23 @@ function Form({type,route}) {
                 password:password
             }).then((res)=>res.data)
             .then((data)=>{
+                toast.success(`Welcome ${data.user}`)
                 dispatch({type:"USER-FETCH",payload:{
                     username:data.user,
                     token:data.token
                 }},)
                 navigate("/")
-            }).catch(err=>alert(err))
+            }).catch(()=>toast.error("Username or Password is Incorrect!"))
         }else{
             api.post("user/signup",{
                 username:name,
                 email:email,
                 password:password
-            }).then(()=>navigate("/login"))
-            .catch((err)=>alert(err))
+            }).then(()=>{
+                toast.success("Profile created! Login to Continue")
+                navigate("/login")
+            })
+            .catch(()=>toast.error("Email already used or Check your Internet Connection!"))
         }
     }
 

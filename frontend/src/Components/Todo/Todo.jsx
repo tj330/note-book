@@ -5,6 +5,7 @@ import TaskCard from './TaskCard'
 import {useDispatch} from "react-redux"
 import { useSelector } from 'react-redux'
 import api from '../../../api'
+import { toast } from 'react-toastify'
 
 function Todo() {
 
@@ -19,11 +20,15 @@ function Todo() {
     api.get("todo")
       .then((res)=>res.data.data)
       .then((data)=>dispatch({type:"TODO-FETCH",content:data}))
+      .catch(()=>toast.error("Error Fetching Todos!,Try again!"))
   }
 
   const deleteTodo=(id)=>{
+    dispatch({type:"TODO-DELETE",id})
     api.delete(`todo/delete/${id}`)
-    .then(()=>getTodo())
+    .then(()=>{
+      getTodo()
+    }).then(()=>toast.success("Todo Deleted!"))
     .catch((err)=>console.log(err))
   }
 
