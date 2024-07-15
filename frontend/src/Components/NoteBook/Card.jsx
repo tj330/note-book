@@ -5,7 +5,7 @@ import {deleteicon} from "../../assets/icons/logo"
 function Card(props) {
 
   return (
-    <div className='card' style={{backgroundColor:`${props.color}`}}>
+    <div className='card'>
       <div>
       <h2>{props.details.title}</h2>
       <p>{props.details.content}</p>

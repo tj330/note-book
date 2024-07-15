@@ -1,6 +1,6 @@
 import checklist from "./checklist.svg"
 import note from "./note.svg"
-import person from "./person.svg"
+import person from "./person.png"
 import edit from "./edit.png"
 import deleteicon from "./delete.svg"
 import error from "./error.svg"

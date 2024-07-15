@@ -5,11 +5,9 @@ import { edit } from "../../assets/icons/logo";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import api from "../../../api";
+import { toast } from "react-toastify";
 
 function Notebook() {
-
-  const colors=["#ffcf99","#74a892","#809bce","#879e82","#adc178"]
-  const index=Math.floor((Math.random()*5)+1)
 
   const note = useSelector((state) => state.note.notes);
   const navigate=useNavigate()
@@ -22,14 +20,18 @@ function Notebook() {
   const getNotes=()=>{
     api.get("notes")
     .then((res)=>res.data.data)
-    .then((data)=>dispatch({type:"NOTE-FETCH",content:data}))
-    .catch((err)=>console.log(err))
+    .then((data)=>{dispatch({type:"NOTE-FETCH",content:data})})
+    .catch(()=>toast.error("Error Fetching Notes,Try again!"))
   }
 
   const deleteNote=(id)=>{
+    dispatch({type:"NOTE-DELETE",id})
     api.delete(`notes/delete/${id}`)
-    .then(()=>getNotes())
-    .catch((err)=>console.log(err))
+    .then(()=>{
+      toast.success("Note Deleted!")
+      getNotes()
+    })
+    .catch(()=>toast.error("Somethind went wrong!"))
   }
 
 
@@ -37,7 +39,7 @@ function Notebook() {
     <>
       <div className="notebook">
         {note.map((note) => (
-          <Card details={note} key={note._id} color={colors[index]} delete={deleteNote}/>
+          <Card details={note} key={note._id} delete={deleteNote}/>
         ))}
       </div>
       <button className="notebook-add" onClick={()=>navigate("/edit")}>

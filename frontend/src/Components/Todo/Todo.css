@@ -16,6 +16,8 @@
     max-width: 500px;
     border: 2px solid var(--primary);
     border-radius: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
 }
 .todo-input input:focus{
     outline: 1px solid var(--secondary);

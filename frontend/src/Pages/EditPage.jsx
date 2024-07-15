@@ -27,7 +27,7 @@ function EditPage() {
         <div className="edit-input">
           <input
             type="text"
-            placeholder="Title"
+            placeholder="Enter your title"
             onChange={(event) =>
               dispatch({ type: "NOTE-HANDLE-TITLE", title: event.target.value })
             }
@@ -44,7 +44,7 @@ function EditPage() {
           <textarea
             name="content"
             id="content"
-            placeholder="Note"
+            placeholder="Any Note?"
             onChange={(event) =>
               dispatch({
                 type: "NOTE-HANDLE-CONTENT",

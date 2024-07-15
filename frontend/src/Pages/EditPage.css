@@ -17,7 +17,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding:10px;
     border: 2px solid var(--primary);
-    border-radius: 50px;
+    border-radius: 10px;
 }
 .edit-input input:focus{
     outline-color: var(--secondary);
@@ -30,9 +30,15 @@
     border-radius: 30px;
     border: none;
     color: black;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+}
+.edit-input button:hover{
+    background-color: var(--primary);
 }
 .edit-textarea{
-    margin: 10px;
+    margin-top: 10px;
 }
 .edit-textarea textarea{
     width: 90%;
